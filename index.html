@@ -9,6 +9,8 @@
         }
         h1 {
           text-align: center;
+          font-size: 50px;
+          text-shadow: 3px 2px #f4f1d6;
         }
         #instructions {
           border: 5px solid #f4f1d6;
@@ -42,7 +44,7 @@
          }
         #youngcardib {
           background-color: #A73F16;
-          height: 103%;
+          height: 800px;
           width: 40%;
         }
         #youngcardibpic {
@@ -82,7 +84,7 @@
         }
         #ConfusedKrabs {
           background-color: #E87E54;
-          height: 730px;
+          height: 620px;
         }
         #ConfusedKrabs-caption {
           color: black;
@@ -100,8 +102,7 @@
         }
         #Squinting {
           background-color: #3A9F74;
-          height: 800px;
-          color: black;
+          height: 685px;
         }
         #squinting-caption {
           color: black;
@@ -120,7 +121,6 @@
         #Spongebob {
           background-color: #8FD6B8;
           height: 600px;
-          color: black;
         }
         #spongebobButton {
           background-color: #8FD6B8;
@@ -131,7 +131,10 @@
           width: 100%;
           overflow: visible;
         }
-        #spongebob-caption{
+        #spongebob-input {
+          color: black;
+        }
+        #spongebob-caption {
           color: black;
           font-family: helvetica;
           font-size: 35px;
@@ -151,9 +154,35 @@
         img {
           margin: 0 auto;
         }
-        .downloadCardi {
+        #downloadCardi {
           background-color: #f4f1d6;
           color: #A73F16 ;
+          height: 27px;
+          margin-left: 7px;
+        }
+        #creepypatrickdownload {
+          background-color: #f4f1d6;
+          color: #E77396;
+          height: 27px;
+          margin-left: 7px;
+        }
+        #confusedkrabsdownload {
+          background-color: #f4f1d6;
+          color: #E87E54;
+          height: 27px;
+          margin-left: 7px;
+        }
+        #squintingdownload {
+          background-color: #f4f1d6;
+          color: #3A9F74;
+          height: 27px;
+          margin-left: 7px;
+        }
+        #spongebobdownload {
+          background-color: #f4f1d6;
+          color: #8FD6B8;
+          height: 27px;
+          margin-left: 7px;
         }
         #inspirationbutton {
           background-color: #f4f1d6;
@@ -168,7 +197,7 @@
     <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
   </head>
   <body>
-    <h1> Meme Gedxgcfhjklnerator! </h1>
+    <h1> Meme Generator! </h1>
     <div id="instructions" >
       <h2> Instructions </h2>
       <p> Follow these 3 simple steps to create your own meme!
@@ -194,7 +223,7 @@
       <div class="captioninput">
         <h4> Input your caption below! </h4>
         <input type="text" id="youngcardib-input" onkeydown="updateText('youngcardib')"/>
-          <button class="downloadCardi" type="button" onclick="downloadImage('#youngcardib-picture')"> Download Image! </button>
+          <button id="downloadCardi" type="button" onclick="downloadImage('#youngcardib-picture')"> Download Image! </button>
       </div>
       <div id="youngcardib-picture">
         <h1 id="youngcardib-caption"></h1>
@@ -205,52 +234,53 @@
 
   <div class='content-box' id="CreepyPatrick">
       <div class="captioninput">
-        <h4> Input your caption below </h4>
+        <h4> Input your caption below! </h4>
         <input type="text" id="CreepyPatrick-input" onkeydown="updateText('CreepyPatrick')"/>
+        <button id="creepypatrickdownload" type="button" onclick="downloadImage('#CreepyPatrick-picture')"> Download Image! </button>
       </div>
       <div id="CreepyPatrick-picture">
         <h1 id="CreepyPatrick-caption"></h1>
         <img src="Images/savagepatrick.jpg" style="visibility: hidden;" />
       </div>
-      <button type="button" onclick="downloadImage('#CreepyPatrick-picture')"> Download Image! </button>
     </div>
 
 
      <div class='content-box' id="ConfusedKrabs">
       <div class="captioninput">
-        <h4> Input your caption below </h4>
+        <h4> Input your caption below! </h4>
         <input type="text" id="ConfusedKrabs-input" onkeydown="updateText('ConfusedKrabs')"/>
+        <button id="confusedkrabsdownload" type="button" onclick="downloadImage('#ConfusedKrabs-picture')"> Download Image! </button>
       </div>
       <div id="ConfusedKrabs-picture">
         <h1 id="ConfusedKrabs-caption"></h1>
         <img src="Images/krabs.jpg" style="visibility: hidden;" />
       </div>
-      <button type="button" onclick="downloadImage('#ConfusedKrabs-picture')"> Download Image! </button>
     </div>
 
   <div class='content-box' id="Squinting">
       <div class="captioninput">
-        <h4> Input your caption below </h4>
+        <h4> Input your caption below! </h4>
         <input type="text" id="Squinting-input" onkeydown="updateText('Squinting')"/>
+        <button id="squintingdownload" type="button" onclick="downloadImage('#Squinting-picture')"> Download Image! </button>
       </div>
       <div id="Squinting-picture">
         <h1 id="Squinting-caption"></h1>
         <img src="Images/squinting.jpg" style="visibility: hidden;" />
       </div>
-      <button type="button" onclick="downloadImage('#Squinting-picture')"> Download Image! </button>
    </div>
 
    <div class='content-box' id="Spongebob">
-      <div class="captioninput">
-        <h4> Input your caption below </h4>
-        <input type="text" id="Spongebob-input" onkeydown="updateText('Spongebob')"/>
-      </div>
-      <div id="Spongebob-picture">
-        <h1 id="spongebob-caption"></h1>
-        <img src="Images/spongebob.jpg" style="visibility: hidden;" />
-      </div>
-      <button type="button" onclick="downloadImage('#Spongebob-picture')"> Download Image! </button>
-  </div>
+       <div class="captioninput">
+         <h4> Input your caption below! </h4>
+         <input type="text" id="Spongebob-input" onkeydown="updateText('Spongebob')"/>
+         <button id="spongebobdownload" type="button" onclick="downloadImage('#Spongebob-picture')"> Download Image! </button>
+       </div>
+       <div id="Spongebob-picture">
+         <h1 id="Spongebon-caption"></h1>
+         <img src="Images/spongebob.jpg" style="visibility: hidden;" />
+       </div>
+    </div>
+
   <script>
           var ConfusedKrabs = document.getElementById("ConfusedKrabs");
           var youngcardib= document.getElementById("youngcardib");
@@ -290,11 +320,11 @@
           }
 
           function showSpongebob (){
-            Spongebob.style.visibility= "visible";
+            Squinting.style.visibility= "hidden";
             ConfusedKrabs.style.visibility= "hidden";
             CreepyPatrick.style.visibility= "hidden";
             youngcardib.style.visibility= "hidden";
-            Squinting.style.visibility= "hidden";
+            Spongebob.style.visibility= "visible";
           }
 
           function updateText(id){
