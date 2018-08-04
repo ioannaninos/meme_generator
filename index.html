@@ -10,6 +10,8 @@
         h1 {
           text-align: center;
           font-size: 50px;
+        }
+        #title {
           text-shadow: 3px 2px #f4f1d6;
         }
         #instructions {
@@ -199,7 +201,7 @@
   <body>
     <h1> Meme Generator! </h1>
     <div id="instructions" >
-      <h2> Instructions </h2>
+      <h2 id="title"> Instructions </h2>
       <p> Follow these 3 simple steps to create your own meme!
         <ol>
           <li> Click on one of the buttons below to choose your meme <em> (This will be your base meme!) </em> </li>
@@ -223,7 +225,7 @@
       <div class="captioninput">
         <h4> Input your caption below! </h4>
         <input type="text" id="youngcardib-input" onkeydown="updateText('youngcardib')"/>
-          <button id="downloadCardi" type="button" onclick="downloadImage('#youngcardib-picture')"> Download Image! </button>
+          <button id="downloadCardi" type="button" onclick="downloadImage('youngcardib-picture')"> Download Image! </button>
       </div>
       <div id="youngcardib-picture">
         <h1 id="youngcardib-caption"></h1>
@@ -236,7 +238,7 @@
       <div class="captioninput">
         <h4> Input your caption below! </h4>
         <input type="text" id="CreepyPatrick-input" onkeydown="updateText('CreepyPatrick')"/>
-        <button id="creepypatrickdownload" type="button" onclick="downloadImage('#CreepyPatrick-picture')"> Download Image! </button>
+        <button id="creepypatrickdownload" type="button" onclick="downloadImage('CreepyPatrick-picture')"> Download Image! </button>
       </div>
       <div id="CreepyPatrick-picture">
         <h1 id="CreepyPatrick-caption"></h1>
@@ -249,7 +251,7 @@
       <div class="captioninput">
         <h4> Input your caption below! </h4>
         <input type="text" id="ConfusedKrabs-input" onkeydown="updateText('ConfusedKrabs')"/>
-        <button id="confusedkrabsdownload" type="button" onclick="downloadImage('#ConfusedKrabs-picture')"> Download Image! </button>
+        <button id="confusedkrabsdownload" type="button" onclick="downloadImage('ConfusedKrabs-picture')"> Download Image! </button>
       </div>
       <div id="ConfusedKrabs-picture">
         <h1 id="ConfusedKrabs-caption"></h1>
@@ -261,7 +263,7 @@
       <div class="captioninput">
         <h4> Input your caption below! </h4>
         <input type="text" id="Squinting-input" onkeydown="updateText('Squinting')"/>
-        <button id="squintingdownload" type="button" onclick="downloadImage('#Squinting-picture')"> Download Image! </button>
+        <button id="squintingdownload" type="button" onclick="downloadImage('Squinting-picture')"> Download Image! </button>
       </div>
       <div id="Squinting-picture">
         <h1 id="Squinting-caption"></h1>
@@ -273,7 +275,7 @@
        <div class="captioninput">
          <h4> Input your caption below! </h4>
          <input type="text" id="Spongebob-input" onkeydown="updateText('Spongebob')"/>
-         <button id="spongebobdownload" type="button" onclick="downloadImage('#Spongebob-picture')"> Download Image! </button>
+         <button id="spongebobdownload" type="button" onclick="downloadImage('Spongebob-picture')"> Download Image! </button>
        </div>
        <div id="Spongebob-picture">
          <h1 id="Spongebon-caption"></h1>
